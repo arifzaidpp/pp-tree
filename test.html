@@ -32,7 +32,7 @@
         }
 
         .tree {
-            margin: 30px;
+            margin: 3vw;
             background-color: #000000;
             border: 1px solid black;
             border-radius: 2em;
@@ -105,7 +105,7 @@
             left: 50%;
             border-top: 2px solid #ccc;
             width: 0;
-            height: 20px;
+            height: 1vw;
         }
 
         .tree li:not(:only-child) ul {
@@ -120,11 +120,11 @@
         /* More styles for connectors and responsive design */
 
         .tree ul li {
-            width: 230px !important;
+            width: 25vw !important;
         }
 
         .tree ul {
-            padding-top: 20px;
+            padding-top: 1vw;
             position: relative;
             transition: all 0.5s;
             -webkit-transition: all 0.5s;
@@ -136,7 +136,7 @@
             text-align: center;
             list-style-type: none;
             position: relative;
-            padding: 20px 5px 0 5px;
+            padding: 1vw 1vw 0 1vw;
             transition: all 0.5s;
             -webkit-transition: all 0.5s;
             -moz-transition: all 0.5s;
@@ -150,7 +150,7 @@
             right: 50%;
             border-top: 1px solid #ccc;
             width: 50%;
-            height: 20px;
+            height: 1vw;
         }
 
         .tree li::after {
@@ -184,16 +184,16 @@
             left: 50%;
             border-left: 1px solid #ccc;
             width: 0;
-            height: 20px;
+            height: 1vw;
         }
 
         .tree li a {
             border: 1px solid #ccc;
-            padding: 5px 10px;
+            padding: .5vw 1vw;
             text-decoration: none;
             color: #ffffff;
             font-family: arial, verdana, tahoma;
-            font-size: 11px;
+            font-size: 1vw;
             display: inline-block;
 
             border-radius: 5px;
@@ -219,12 +219,12 @@
             border-color: #94a0b4;
         }
 
-        .tree li a img {
+        .tree ul li a .img {
             width: 100%;
-            max-width: 80px;
+            max-width: 5vw;
             height: auto;
             border-radius: 50%;
-            margin-bottom: 5px;
+            margin-bottom: .6vw;
         }
 
         .tree li a:hover+.wife {
@@ -232,40 +232,36 @@
             color: #000;
             border: 1px solid #94a0b4;
         }
+        
 
         .family-title {
-            margin: 0;
-            padding: 0;
-            display: flex;
+            margin-top: 2vh;
+            border-radius: 15px;
+            background-color: #000;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background-color: black;
-            width: 70px;
         }
 
         .title-container {
             padding-top: 15px;
             display: flex;
             justify-content: space-between;
-            -webkit-transform: rotate(-90deg);
-            -moz-transform: rotate(-90deg);
-            -o-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
         }
 
         .title {
             color: white;
             font-family: "Arial", sans-serif;
-            font-size: 1.3em;
+            font-size: 1.1em;
             letter-spacing: 2px;
-            width: 18em;
             position: relative;
             display: inline-flex;
+            text-align: center;
         }
 
-        .lines {
+        @media screen and (min-width: 600px) {
+
+
+            .lines {
             border-top: 2px solid white;
             margin: 10px;
             display: inline-block;
@@ -277,15 +273,70 @@
         }
 
         .right {
-            width: 29vh;
+            width: 15vw;
             margin-top: 15px;
         }
 
         .left {
-            width: 29vh;
+            width: 15vw;
             margin-top: 15px;
-            margin-left: -1px;
         }
+        }
+
+        @media screen and (min-width: 48em) {
+            .family-title {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                border-radius: 0;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: black;
+                width: 70px;
+            }
+
+            .title-container {
+                -webkit-transform: rotate(-90deg);
+                -moz-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+            }
+
+            .title {
+                color: white;
+                font-family: "Arial", sans-serif;
+                font-size: 1.3em;
+                letter-spacing: 2px;
+                width: 18em !important;
+                position: relative;
+                display: inline-flex;
+            }
+
+            .lines {
+                border-top: 2px solid white;
+                margin: 10px;
+                display: inline-block;
+            }
+
+            .right,
+            .left {
+                display: inline-block;
+            }
+
+            .right {
+                width: 29vh;
+                margin-top: 15px;
+            }
+
+            .left {
+                width: 29vh;
+                margin-top: 15px;
+                margin-left: -1px;
+            }
+        }
+
     </style>
 </head>
 
@@ -293,7 +344,7 @@
     <div class="bg-wrap">
         <div class="container-fluid">
             <div class="row">
-                <div class="d-none d-md-flex col-md-2 col-lg-1">
+                <div class="d-md-flex col-md-2 col-lg-1">
                     <div class="col-md-6 family-title">
                         <div class="title-container">
                             <div class="lines right"></div>
@@ -306,60 +357,68 @@
                     <div class="tree">
                         <ul>
                             <li>
-                                <a href="#" class="husband"><img src="per.jpg"
-                                        alt="Adoracion" /><br /><strong>Adoracion</strong>
+                                <a href="#" class="husband"><img class="img" class="img class=" img" "  class=" img
+                                        class="img" "  class=" img class="img" "  class=" img class="img" "  class=" img
+                                        class="img" "  class=" img class="img" "  class=" img class="img" "  class=" img
+                                        class="img" "  class=" img class="img" "  class=" img class="img" "  class=" img
+                                        class="img" "  class=" img class="img" "  class=" img class="img" "  src="
+                                        per.jpg" alt="Adoracion" /><br /><strong>Adoracion</strong>
                                     <p>Husband</p>
                                 </a>
-                                <a href="#" class="wife"><img src="per.jpg"
+                                <a href="#" class="wife"><img class="img" src="per.jpg"
                                         alt="Adoracion" /><br /><strong>Adoracion</strong>
                                     <p>wife</p>
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#"><img src="per.jpg" alt="Margaret" /><br /><strong>Adoracion</strong>
+                                        <a href="#"><img class="img" src="per.jpg"
+                                                alt="Margaret" /><br /><strong>Adoracion</strong>
                                             <p>Husband</p>
                                         </a>
-                                        <a href="#" class="wife"><img src="per.jpg"
+                                        <a href="#" class="wife"><img class="img" src="per.jpg"
                                                 alt="Margaret" /><br /><strong>Adoracion</strong>
                                             <p>wife</p>
                                         </a>
                                         <ul>
                                             <li>
-                                                <a href="#"><img src="per.jpg" alt="David" /><br />David</a>
+                                                <a href="#"><img class="img" class="img class=" img" "  src=" per.jpg"
+                                                        alt="David" /><br />David</a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src="per.jpg" alt="Hana" /><br />Hana</a>
+                                                <a href="#"><img class="img" src="per.jpg" alt="Hana" /><br />Hana</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="per.jpg" alt="Margaret" /><br /><strong>Adoracion</strong>
+                                        <a href="#"><img class="img" src="per.jpg"
+                                                alt="Margaret" /><br /><strong>Adoracion</strong>
                                             <p>Husband</p>
                                         </a>
-                                        <a href="#" class="wife"><img src="per.jpg"
+                                        <a href="#" class="wife"><img class="img" src="per.jpg"
                                                 alt="Anastasia" /><br /><strong>Adoracion</strong>
                                             <p>wife</p>
                                         </a>
                                         <ul>
                                             <li>
-                                                <a href="#"><img src="per.jpg" alt="Sammy" /><br />Sammy</a>
+                                                <a href="#"><img class="img" src="per.jpg" alt="Sammy" /><br />Sammy</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="per.jpg" alt="Margaret" /><br /><strong>Adoracion</strong>
+                                        <a href="#"><img class="img" src="per.jpg"
+                                                alt="Margaret" /><br /><strong>Adoracion</strong>
                                             <p>Husband</p>
                                         </a>
-                                        <a href="#" class="wife"><img src="per.jpg"
+                                        <a href="#" class="wife"><img class="img" src="per.jpg"
                                                 alt="Margaret" /><br /><strong>Adoracion</strong>
                                             <p>wife</p>
                                         </a>
                                         <ul>
                                             <li>
-                                                <a href="#"><img src="per.jpg" alt="David" /><br />David</a>
+                                                <a href="#"><img class="img" src="per.jpg" alt="David" /><br />David</a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src="per.jpg" alt="Hana" /><br />Hana</a>
+                                                <a href="#"><img class="img" src="per.jpg" alt="Hana" /><br />Hana</a>
                                             </li>
                                         </ul>
                                     </li>
