@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Tree</title>
+<style>
+  /* Add more styles as needed */
+</style>
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<div class="family-tree">
+  <div class="generation">
+    <div class="person">
+        <a href="">
+
+            <img class="img" src="per.jpg" alt="Grandfather"><br>
+            Grandfather
+        </a>
+    </div>
+    <div class="person">
+        <a href="">
+            <img class="img" src="per.jpg" alt="Grandmother"><br>
+            Grandmother
+        </a>
+    </div>
+  </div>
+  <div class="generation">
+    <div class="person">
+      <img src="per.jpg" alt="Father">
+      Father
+    </div>
+    <div class="person">
+      <img src="per.jpg" alt="Mother">
+      Mother
+    </div>
+  </div>
+  <div class="generation">
+    <div class="person">
+      <img src="per.jpg" alt="Child 1">
+      Child 1
+    </div>
+    <div class="person">
+      <img src="per.jpg" alt="Child 2">
+      Child 2
+    </div>
+    <!-- Add more family members as needed -->
+  </div>
+  <script>function addFamilyMember(generationSelector, name, imageUrl) {
+    // Create the container for the new family member
+    var memberDiv = document.createElement('div');
+    memberDiv.className = 'person';
+  
+    // Add the image
+    var img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = name;
+    memberDiv.appendChild(img);
+  
+    // Add the name
+    var nameDiv = document.createElement('div');
+    nameDiv.textContent = name;
+    memberDiv.appendChild(nameDiv);
+  
+    // Find the generation div and append the new member
+    var generationDiv = document.querySelector(generationSelector);
+    generationDiv.appendChild(memberDiv);
+  }
+  
+  // Example usage:
+  
+  </script>
+  <button onclick="addFamilyMember('.generation:first-child', 'New Child', 'per.jpg');">click me</button>
+</div>
+</body>
+</html>
