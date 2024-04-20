@@ -1,77 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <title>Family Tree</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <div class="bg-wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="d-md-flex col-md-2 col-lg-1">
+                    <div class="col-md-6 family-title">
+                        <div class="title-container">
+                            <div class="lines right"></div>
+                            <p class="title"><strong>PALLIPARAMBAN FAMILY TREE</strong></p>
+                            <div class="lines left"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 col-lg-11">
+                    <div class="tree col-md-10 col-lg-11">
+                        <div class="parent">
+                            <div class="pair" id="pair">
+                                <div class="dad">
+                                    <img src="per.jpg" alt=""><br>
+                                    <p>Dad</p>
+                                </div>
+                                <div class="mom">
+                                    <img src="per.jpg" alt="">
+                                    <p>Mom</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="child parent" id="child">
+                            <div class="pair" id="pair">
+                                <div class="dad">
+                                    <img src="per.jpg" alt=""><br>
+                                    <p>Dad</p>
+                                </div>
+                                <div class="mom">
+                                    <img src="per.jpg" alt="">
+                                    <p>Mom</p>
+                                </div>
+                            </div>
+                            <div class="pair" id="pair">
+                                <div class="dad">
+                                    <img src="per.jpg" alt=""><br>
+                                    <p>Dad</p>
+                                </div>
+                                <div class="mom">
+                                    <img src="per.jpg" alt="">
+                                    <p>Mom</p>
+                                </div>
+                            </div>
+                            <div class="pair" id="pair">
+                                <div class="dad">
+                                    <img src="per.jpg" alt=""><br>
+                                    <p>Dad</p>
+                                </div>
+                                <div class="mom">
+                                    <img src="per.jpg" alt="">
+                                    <p>Mom</p>
+                                </div>
+                            </div>
+
+                            <div class="pair" id="pair">
+                                <div class="dad">
+                                    <img src="per.jpg" alt=""><br>
+                                    <p>Dad</p>
+                                </div>
+                                <div class="mom">
+                                    <img src="per.jpg" alt="">
+                                    <p>Mom</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Function to resize child divs
+        function resizeDivs() {
+          var parent = document.getElementById('tree');
+          var children = parent.getElementsByClassName('child');
+          var parentWidth = parent.offsetWidth; // Get the parent div's width
+          var childWidth = parentWidth / children.length; // Divide by number of child divs
+
+          // Set width and height for each child div
+          for (var i = 0; i < children.length; i++) {
+            children[i].style.width = childWidth + 'px';
+            children[i].style.height = childWidth + 'px'; // Set height equal to the new width
+          }
+        }
+      
+        // Call the function to resize divs
+        resizeDivs();
+      
+        // Optionally, call resizeDivs on window resize if you want the divs to be responsive
+        window.onresize = resizeDivs;
+      </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Family Tree</title>
+<title>Div Resizing</title>
 <style>
-  /* Add more styles as needed */
+  .parent {
+    width: 100%; /* Set the width of the parent div */
+  }
+  .child {
+    float: left; /* Align children divs horizontally */
+    margin: 5px; /* Optional: Add some space between the divs */
+    background-color: lightblue; /* Just for visibility */
+  }
 </style>
-<link rel="stylesheet" href="styl.css">
 </head>
 <body>
-<div class="family-tree">
-  <div class="generation">
-    <div class="person">
-        <a href="">
 
-            <img class="img" src="per.jpg" alt="Grandfather"><br>
-            Grandfather
-        </a>
-    </div>
-    <div class="person">
-        <a href="">
-            <img class="img" src="per.jpg" alt="Grandmother"><br>
-            Grandmother
-        </a>
-    </div>
-  </div>
-  <div class="generation">
-    <div class="person">
-      <img src="per.jpg" alt="Father">
-      Father
-    </div>
-    <div class="person">
-      <img src="per.jpg" alt="Mother">
-      Mother
-    </div>
-  </div>
-  <div class="generation">
-    <div class="person">
-      <img src="per.jpg" alt="Child 1">
-      Child 1
-    </div>
-    <div class="person">
-      <img src="per.jpg" alt="Child 2">
-      Child 2
-    </div>
-    <!-- Add more family members as needed -->
-  </div>
-  <script>function addFamilyMember(generationSelector, name, imageUrl) {
-    // Create the container for the new family member
-    var memberDiv = document.createElement('div');
-    memberDiv.className = 'person';
-  
-    // Add the image
-    var img = document.createElement('img');
-    img.src = imageUrl;
-    img.alt = name;
-    memberDiv.appendChild(img);
-  
-    // Add the name
-    var nameDiv = document.createElement('div');
-    nameDiv.textContent = name;
-    memberDiv.appendChild(nameDiv);
-  
-    // Find the generation div and append the new member
-    var generationDiv = document.querySelector(generationSelector);
-    generationDiv.appendChild(memberDiv);
+<div class="parent" id="parentDiv">
+  Child divs go here
+  <div class="child">1</div>
+  <div class="child">2</div>
+  <div class="child">3</div>
+  <!-- Add more child divs as needed -->
+<!-- </div>
+
+<script>
+  // Function to resize child divs
+  function resizeDivs() {
+    var parent = document.getElementById('parentDiv');
+    var children = parent.getElementsByClassName('child');
+    var parentWidth = parent.offsetWidth; // Get the parent div's width
+    var childWidth = parentWidth / children.length; // Divide by number of child divs -->
+<!-- 
+    // Set width and height for each child div
+    for (var i = 0; i < children.length; i++) {
+      children[i].style.width = childWidth + 'px';
+      children[i].style.height = childWidth + 'px'; // Set height equal to the new width
+    }
   }
-  
-  // Example usage:
-  
-  </script>
-  <button onclick="addFamilyMember('.generation:first-child', 'New Child', 'per.jpg');">click me</button>
-</div>
+
+  // Call the function to resize divs
+  resizeDivs();
+
+  // Optionally, call resizeDivs on window resize if you want the divs to be responsive
+  window.onresize = resizeDivs;
+</script>
+
 </body>
-</html>
+</html> --> -->
